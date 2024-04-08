@@ -4,9 +4,6 @@ import { setSearchField, requestRobots } from '../actions';
 
 import MainPage from '../components/MainPage'
 
-import './App.css';
-
-
 const mapStateToProps = (state) => {
   return {
     searchField: state.searchRobots.searchField,
@@ -24,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 
 class App extends Component {
   render() {
-    return <MainPage {...this.props}/>
+    return <MainPage {...this.props} />
   }
 }
 

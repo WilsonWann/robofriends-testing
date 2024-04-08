@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
 import Scroll from './Scroll';
-import ErrorBoundry from './ErrorBoundry';
+import ErrorBoundary from './ErrorBoundary';
 import Header from './Header';
 
+import "./MainPage.css"
 export class MainPage extends Component {
   componentDidMount() {
     this.props.onRequestRobots();
@@ -24,12 +25,12 @@ export class MainPage extends Component {
     return (
       <div className='tc'>
         <Header />
-        <SearchBox searchChange={onSearchChange}/>
+        <SearchBox searchChange={onSearchChange} />
         <Scroll>
-          { isPending ? <h1>Loading</h1> :
-            <ErrorBoundry>
+          {isPending ? <h1>Loading</h1> :
+            <ErrorBoundary>
               <CardList robots={this.filterRobots()} />
-            </ErrorBoundry>
+            </ErrorBoundary>
           }
         </Scroll>
       </div>
