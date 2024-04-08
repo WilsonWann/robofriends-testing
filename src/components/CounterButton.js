@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class CounterButton extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class CounterButton extends Component {
       <button
         id='counter'
         color={this.props.color}
-        onClick={() => this.setState(state => ({count: state.count + 1}))}>
+        onClick={() => this.setState(state => ({ count: state.count + 1 }))}>
         Count: {this.state.count}
       </button>
     );
