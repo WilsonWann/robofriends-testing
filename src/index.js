@@ -15,13 +15,13 @@ import './index.css';
 
 const logger = createLogger()
 
-const rootReducers = combineReducers({requestRobots, searchRobots})
+const rootReducers = combineReducers({ requestRobots, searchRobots })
 const store = createStore(rootReducers, applyMiddleware(thunkMiddleware, logger))
 
 const root = createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App/>
+    <App />
   </Provider>
 );
 
